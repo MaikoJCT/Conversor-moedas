@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>Conversor de moedas</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+      <script>
+        function Converter() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmReal = parseFloat(valor);
+  var valorEmDolarNumerico = valorEmReal / 5;
+
+  console.log(valorEmReal);
+
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O resultado em dólar é US$" + valorEmDolarNumerico;
+  elementoValorConvertido.innerHTML = valorConvertido;
+}
+
+      </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+          Conversor de moedas
+        </h1>
+        <p class="page-subtitle">
+          Converta de Real para Dólar.
+        </p>
+        <img src="https://www.suno.com.br/wp-content/uploads/2017/10/dolar.jpg.jpg" class="page-logo" alt=""><br><br>
+        <label for="moeda">Insira o valor(R$)</label><br>
+        <input type="number" id="valor" size="2" /><br>
+        <button type="submit" onclick="Converter()">Converter</button>
+        <h2 id="valorConvertido"></h2>
+      </div>
+      
+</body>
+</html>
